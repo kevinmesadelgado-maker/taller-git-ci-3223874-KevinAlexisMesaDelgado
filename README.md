@@ -14,5 +14,3 @@ Incluye una interfaz simple con una lista y un botón, y funciones básicas en J
 
 - `scr/index.html`
 - `scr/app.js`
-
-
