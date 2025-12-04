@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main, feat/ui-basica]
+  pull_request:
+    branches: [main]
+
+jobs:
+  prettier:
+    name: Prettier Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Prettier
+        run: |
+          npm init -y
+          npm install --no-save prettier
+
+      - name: Run Prettier Check
+        run: |
+          npx prettier --check "**/*.{js,html,css,md,json}"
